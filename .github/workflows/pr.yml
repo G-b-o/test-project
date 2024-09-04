@@ -1,0 +1,12 @@
+name: pr
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+jobs:
+  test-backend:
+    uses: ./.github/workflows/_test_backend.yml
